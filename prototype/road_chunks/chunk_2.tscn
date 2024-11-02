@@ -1,0 +1,702 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsdi4y2hnhxuy"]
+
+[ext_resource type="Texture2D" uid="uid://qg348we6vfku" path="res://prototype/road_chunks/sky.png" id="1_t1u0t"]
+[ext_resource type="Texture2D" uid="uid://c58yq1hdhf5kq" path="res://prototype/road_chunks/clouds_trim.png" id="2_o38qn"]
+[ext_resource type="Texture2D" uid="uid://bapx3ecm34i5v" path="res://prototype/road_chunks/tree_atlas_far.png" id="3_mpkto"]
+[ext_resource type="Texture2D" uid="uid://pgjlbt2hakv5" path="res://prototype/road_chunks/tree_atlas_middle.png" id="4_ugxq0"]
+[ext_resource type="Texture2D" uid="uid://dxvbrnabipj43" path="res://prototype/road_chunks/tree_atlas_close.png" id="5_81c2v"]
+[ext_resource type="Texture2D" uid="uid://b6rify2jhx8b" path="res://prototype/road_chunks/railway_trim.png" id="6_iuyqj"]
+
+[sub_resource type="Gradient" id="Gradient_2jup4"]
+colors = PackedColorArray(0.176419, 0.176419, 0.176419, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kmlp2"]
+gradient = SubResource("Gradient_2jup4")
+width = 640
+height = 360
+fill_from = Vector2(0.982609, 0.966184)
+
+[node name="Chunk" type="Node2D"]
+
+[node name="gradient" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_kmlp2")
+centered = false
+
+[node name="SkyLayer" type="Parallax2D" parent="."]
+
+[node name="Sky" type="Sprite2D" parent="SkyLayer"]
+texture = ExtResource("1_t1u0t")
+centered = false
+
+[node name="CloudsTrim" type="Sprite2D" parent="SkyLayer"]
+position = Vector2(0, 13)
+texture = ExtResource("2_o38qn")
+centered = false
+
+[node name="FarTreesLayer" type="Parallax2D" parent="."]
+scroll_offset = Vector2(2, -3)
+
+[node name="1" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(17, 125)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="4" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(359, 109)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="2" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(31, 138)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 0, 71, 197)
+
+[node name="5" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(248, 127)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 0, 71, 197)
+
+[node name="3" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(69, 77)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="7" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(17, 125)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="8" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(312, 134)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 0, 71, 197)
+
+[node name="32" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(505, 151)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 0, 71, 197)
+
+[node name="9" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(69, 77)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="13" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(210, 84)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="18" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(159, 135)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="26" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(178, 109)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="30" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(-6, 86)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="34" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(264, 89)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="19" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(335, 98)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="10" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(284, 99)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="11" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(295, 160)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(32, 0, 71, 197)
+
+[node name="21" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(437, 106)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(32, 0, 71, 197)
+
+[node name="12" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(418, 89)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="6" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(379, 109)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="17" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(285, 99)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="14" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(133, 99)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="31" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(34, 101)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="20" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(411, 114)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="22" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(509, 117)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="23" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(597, 105)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="33" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(550, 122)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="35" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(317, 76)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="24" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(446, 75)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="16" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(152, 126)
+texture = ExtResource("3_mpkto")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.6467, 197)
+
+[node name="15" type="Sprite2D" parent="FarTreesLayer"]
+position = Vector2(228, 109)
+texture = ExtResource("3_mpkto")
+centered = false
+region_enabled = true
+region_rect = Rect2(107, 0, 56, 197)
+
+[node name="MiddleTreesLayer" type="Parallax2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(283, 113)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="27" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(193, 95)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="15" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(82, 126)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="9" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(357, 117)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="12" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(357, 117)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="13" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(447, 103)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="28" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(111, 75)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="17" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(233, 101)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="18" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(41, 108)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 37, 212)
+
+[node name="2" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(58, 142)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="14" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(264, 128)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="5" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(245, 161)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="10" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(351, 168)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="11" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(587, 177)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="29" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(419, 134)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="30" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(480, 153)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="25" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(398, 173)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="24" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(87, 166)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 0, 50, 135)
+
+[node name="3" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(322, 133)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 0, 51, 171)
+
+[node name="21" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(322, 133)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 0, 51, 171)
+
+[node name="22" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(564, 117)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 0, 51, 171)
+
+[node name="19" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(163, 139)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 0, 51, 171)
+
+[node name="26" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(92, 128)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 0, 51, 171)
+
+[node name="20" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(525, 146)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(96, 0, 51, 171)
+
+[node name="4" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(193, 124)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(152, 0, 79, 182)
+
+[node name="6" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(535, 144)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(152, 0, 79, 182)
+
+[node name="7" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(535, 144)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(152, 0, 79, 182)
+
+[node name="8" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(352, 144)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(152, 0, 79, 182)
+
+[node name="16" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(97, 158)
+texture = ExtResource("4_ugxq0")
+centered = false
+region_enabled = true
+region_rect = Rect2(152, 0, 79, 182)
+
+[node name="23" type="Sprite2D" parent="MiddleTreesLayer"]
+position = Vector2(124, 140)
+texture = ExtResource("4_ugxq0")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(152, 0, 79, 182)
+
+[node name="CloseTreesLayer" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-6, 17)
+
+[node name="1" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(89, 134)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 36, 222)
+
+[node name="2" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(18, 186)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(42, 0, 30, 175)
+
+[node name="19" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(416, 157)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(42, 0, 30, 175)
+
+[node name="25" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(437, 119)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(42, 0, 30, 175)
+
+[node name="20" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(618, 153)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(42, 0, 30, 175)
+
+[node name="3" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(38, 167)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(80, 0, 71, 194)
+
+[node name="5" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(382, 205)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(218, 0, 50, 114)
+
+[node name="13" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(231, 197)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(218, 0, 50, 114)
+
+[node name="10" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(252, 215)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(218, 0, 50, 114)
+
+[node name="6" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(468, 183)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 52, 171)
+
+[node name="22" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(20, 191)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 52, 171)
+
+[node name="14" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(154, 163)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 52, 171)
+
+[node name="26" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(434, 151)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 52, 171)
+
+[node name="27" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(323, 156)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 52, 171)
+
+[node name="9" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(94, 179)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 52, 171)
+
+[node name="18" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(66, 145)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 52, 171)
+
+[node name="16" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(217, 119)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(154, 0, 56, 205)
+
+[node name="28" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(15, 120)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(154, 0, 56, 205)
+
+[node name="7" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(529, 158)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="21" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(487, 151)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="29" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(566, 144)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="17" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(334, 132)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="23" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(-41, 145)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="15" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(180, 127)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="12" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(278, 150)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="24" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(236, 115)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="8" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(112, 178)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(327, 0, 79, 181)
+
+[node name="4" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(317, 140)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(154, 0, 56, 205)
+
+[node name="11" type="Sprite2D" parent="CloseTreesLayer"]
+position = Vector2(584, 129)
+texture = ExtResource("5_81c2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(154, 0, 56, 205)
+
+[node name="GroundLayer" type="Parallax2D" parent="."]
+scroll_offset = Vector2(0, -1)
+
+[node name="RailwayTrim" type="Sprite2D" parent="GroundLayer"]
+position = Vector2(320, 344)
+texture = ExtResource("6_iuyqj")
