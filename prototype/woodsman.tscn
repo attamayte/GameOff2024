@@ -5,9 +5,8 @@
 [node name="Hero" type="Node2D"]
 
 [node name="LeftArm" type="Sprite2D" parent="."]
-position = Vector2(1.53019, -14.5562)
+position = Vector2(1.5302, -14.5562)
 rotation = -1.58629
-scale = Vector2(1, 1)
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-3, 0)
@@ -15,7 +14,7 @@ region_enabled = true
 region_rect = Rect2(243, 284, 5, 8)
 
 [node name="LeftForearm" type="Sprite2D" parent="."]
-position = Vector2(9.54472, -13.6803)
+position = Vector2(9.54473, -13.6803)
 rotation = 3.09663
 scale = Vector2(1, 1)
 texture = ExtResource("1_xoucj")
@@ -35,7 +34,7 @@ region_rect = Rect2(216, 304, 5, 13)
 
 [node name="LeftFoot" type="Sprite2D" parent="."]
 position = Vector2(3.77048, 15.7216)
-rotation = -0.00177235
+rotation = -0.001773
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-2, 0)
@@ -44,7 +43,7 @@ region_rect = Rect2(215, 319, 7, 7)
 
 [node name="LeftForeleg" type="Sprite2D" parent="."]
 position = Vector2(4.76516, 12.7198)
-rotation = -0.00177235
+rotation = -0.001773
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-3, 0)
@@ -52,9 +51,8 @@ region_enabled = true
 region_rect = Rect2(215, 315, 5, 5)
 
 [node name="Handgun" type="Sprite2D" parent="."]
-position = Vector2(7.81283, -25.9507)
-rotation = -0.723912
-scale = Vector2(1, 1)
+position = Vector2(7.81286, -25.9507)
+rotation = -0.723907
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-3, -4)
@@ -62,7 +60,7 @@ region_enabled = true
 region_rect = Rect2(276, 286, 13, 8)
 
 [node name="LeftHand" type="Sprite2D" parent="."]
-position = Vector2(9.18516, -21.6722)
+position = Vector2(9.18518, -21.6722)
 rotation = -2.55678
 scale = Vector2(1, 1)
 texture = ExtResource("1_xoucj")
