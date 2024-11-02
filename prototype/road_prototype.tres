@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RoadParams" load_steps=2 format=3 uid="uid://dd0h2w56pl0m4"]
+
+[ext_resource type="Script" path="res://prototype/road_params.gd" id="1_kn16o"]
+
+[resource]
+script = ExtResource("1_kn16o")
+biome = 0
+length_min = 1
+length_max = 1
+poi_min = 0
+poi_max = 0
+unique_poi_chance = 0.0
+chunks = Array[PackedScene]([])
