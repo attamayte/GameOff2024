@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Biome" load_steps=5 format=3 uid="uid://b3tkdi823gfcj"]
+
+[ext_resource type="PackedScene" uid="uid://cjxlh8b2qfpvf" path="res://prototype/road_chunks/chunk_1.tscn" id="1_c85ol"]
+[ext_resource type="Script" path="res://code/world_generation/biome.gd" id="1_tbf5y"]
+[ext_resource type="PackedScene" uid="uid://bsdi4y2hnhxuy" path="res://prototype/road_chunks/chunk_2.tscn" id="2_eq63l"]
+[ext_resource type="PackedScene" uid="uid://7rg8jbt6at3b" path="res://prototype/road_chunks/chunk_3.tscn" id="3_a7nqw"]
+
+[resource]
+script = ExtResource("1_tbf5y")
+repeated_chunks = Array[PackedScene]([ExtResource("1_c85ol"), ExtResource("2_eq63l"), ExtResource("3_a7nqw")])
+unique_chunks = Array[PackedScene]([])

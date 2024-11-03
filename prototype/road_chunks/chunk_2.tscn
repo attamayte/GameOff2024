@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsdi4y2hnhxuy"]
+[gd_scene load_steps=7 format=3 uid="uid://bsdi4y2hnhxuy"]
 
 [ext_resource type="Texture2D" uid="uid://qg348we6vfku" path="res://prototype/road_chunks/sky.png" id="1_t1u0t"]
 [ext_resource type="Texture2D" uid="uid://c58yq1hdhf5kq" path="res://prototype/road_chunks/clouds_trim.png" id="2_o38qn"]
@@ -7,22 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://dxvbrnabipj43" path="res://prototype/road_chunks/tree_atlas_close.png" id="5_81c2v"]
 [ext_resource type="Texture2D" uid="uid://b6rify2jhx8b" path="res://prototype/road_chunks/railway_trim.png" id="6_iuyqj"]
 
-[sub_resource type="Gradient" id="Gradient_2jup4"]
-colors = PackedColorArray(0.176419, 0.176419, 0.176419, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kmlp2"]
-gradient = SubResource("Gradient_2jup4")
-width = 640
-height = 360
-fill_from = Vector2(0.982609, 0.966184)
-
 [node name="Chunk" type="Node2D"]
 
-[node name="gradient" type="Sprite2D" parent="."]
-texture = SubResource("GradientTexture2D_kmlp2")
-centered = false
-
 [node name="SkyLayer" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 1)
+repeat_size = Vector2(640, 0)
 
 [node name="Sky" type="Sprite2D" parent="SkyLayer"]
 texture = ExtResource("1_t1u0t")
@@ -34,7 +23,8 @@ texture = ExtResource("2_o38qn")
 centered = false
 
 [node name="FarTreesLayer" type="Parallax2D" parent="."]
-scroll_offset = Vector2(2, -3)
+z_index = 1
+scroll_scale = Vector2(0.35, 1)
 
 [node name="1" type="Sprite2D" parent="FarTreesLayer"]
 position = Vector2(17, 125)
@@ -267,6 +257,8 @@ region_enabled = true
 region_rect = Rect2(107, 0, 56, 197)
 
 [node name="MiddleTreesLayer" type="Parallax2D" parent="."]
+z_index = 2
+scroll_scale = Vector2(0.5, 1)
 
 [node name="1" type="Sprite2D" parent="MiddleTreesLayer"]
 position = Vector2(283, 113)
@@ -489,7 +481,8 @@ region_enabled = true
 region_rect = Rect2(152, 0, 79, 182)
 
 [node name="CloseTreesLayer" type="Parallax2D" parent="."]
-scroll_offset = Vector2(-6, 17)
+z_index = 3
+scroll_scale = Vector2(0.7, 1)
 
 [node name="1" type="Sprite2D" parent="CloseTreesLayer"]
 position = Vector2(89, 134)
@@ -695,7 +688,7 @@ region_enabled = true
 region_rect = Rect2(154, 0, 56, 205)
 
 [node name="GroundLayer" type="Parallax2D" parent="."]
-scroll_offset = Vector2(0, -1)
+z_index = 4
 
 [node name="RailwayTrim" type="Sprite2D" parent="GroundLayer"]
 position = Vector2(320, 344)

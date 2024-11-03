@@ -1,4 +1,4 @@
-class_name RoadChunk extends Node2D
+class_name PlayerController extends Controller
 
 
 # Called when the node enters the scene tree for the first time.
