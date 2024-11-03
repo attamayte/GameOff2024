@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RoadParams" load_steps=3 format=3 uid="uid://dd0h2w56pl0m4"]
+
+[ext_resource type="Resource" uid="uid://b3tkdi823gfcj" path="res://resources/biomes/test_biome.tres" id="1_axemy"]
+[ext_resource type="Script" path="res://code/world_generation/road_params.gd" id="1_kn16o"]
+
+[resource]
+script = ExtResource("1_kn16o")
+biome = ExtResource("1_axemy")
+length_min = 10
+length_max = 10
+poi_min = 0
+poi_max = 0
+unique_poi_chance = 0.0

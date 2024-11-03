@@ -13,6 +13,9 @@ func get_repeated_size() -> int:
 func get_repeated_chunks() -> Array[PackedScene]:
 	return biome.repeated_chunks
 
+func get_repeated_chunk_at(index: int) -> PackedScene:
+	return biome.repeated_chunks[index]
+
 func get_random_length() -> int:
 	var random_length: int = randi_range(length_min, length_max)
 	return mini(random_length, get_repeated_size())

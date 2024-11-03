@@ -5,8 +5,8 @@
 [node name="Hero" type="Node2D"]
 
 [node name="LeftArm" type="Sprite2D" parent="."]
-position = Vector2(1.5302, -14.5562)
-rotation = -1.58629
+position = Vector2(3.94929, -14.0168)
+rotation = -0.681238
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-3, 0)
@@ -14,9 +14,8 @@ region_enabled = true
 region_rect = Rect2(243, 284, 5, 8)
 
 [node name="LeftForearm" type="Sprite2D" parent="."]
-position = Vector2(9.54473, -13.6803)
-rotation = 3.09663
-scale = Vector2(1, 1)
+position = Vector2(8.21054, -7.17268)
+rotation = -2.2815
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-2, 0)
@@ -51,8 +50,8 @@ region_enabled = true
 region_rect = Rect2(215, 315, 5, 5)
 
 [node name="Handgun" type="Sprite2D" parent="."]
-position = Vector2(7.81286, -25.9507)
-rotation = -0.723907
+position = Vector2(15.2194, -15.5597)
+rotation = -0.0380191
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-3, -4)
@@ -60,9 +59,8 @@ region_enabled = true
 region_rect = Rect2(276, 286, 13, 8)
 
 [node name="LeftHand" type="Sprite2D" parent="."]
-position = Vector2(9.18518, -21.6722)
-rotation = -2.55678
-scale = Vector2(1, 1)
+position = Vector2(14.2738, -12.3916)
+rotation = -1.65172
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-1, 0)
@@ -78,7 +76,7 @@ region_rect = Rect2(226, 296, 10, 6)
 
 [node name="Torso" type="Sprite2D" parent="Hips"]
 position = Vector2(5, 2)
-rotation = -0.200481
+rotation = -0.00422315
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-7, -19)
@@ -87,7 +85,7 @@ region_rect = Rect2(224, 279, 13, 19)
 
 [node name="Head" type="Sprite2D" parent="Hips/Torso"]
 position = Vector2(1, -15)
-rotation = -0.270461
+rotation = 0.0381378
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-4, -8)
@@ -96,7 +94,7 @@ region_rect = Rect2(204, 284, 9, 11)
 
 [node name="RightArm" type="Sprite2D" parent="Hips/Torso"]
 position = Vector2(-3, -12)
-rotation = -1.92937
+rotation = -1.43974
 texture = ExtResource("1_xoucj")
 centered = false
 offset = Vector2(-3, 0)
@@ -128,7 +126,7 @@ remote_path = NodePath("../../../../../../Handgun")
 
 [node name="LeftArmRemote" type="RemoteTransform2D" parent="Hips/Torso"]
 position = Vector2(4, -12)
-rotation = -1.38581
+rotation = -0.677015
 remote_path = NodePath("../../../LeftArm")
 
 [node name="LeftForearmRemote" type="RemoteTransform2D" parent="Hips/Torso/LeftArmRemote"]

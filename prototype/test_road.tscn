@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bldq5oulfkh0l"]
+
+[ext_resource type="Script" path="res://code/world_generation/road.gd" id="1_74okm"]
+[ext_resource type="Resource" uid="uid://dd0h2w56pl0m4" path="res://resources/road_templates/road_prototype.tres" id="2_twf0n"]
+[ext_resource type="PackedScene" uid="uid://dulu0xxaos165" path="res://prototype/woodsman.tscn" id="3_2oyv4"]
+[ext_resource type="PackedScene" uid="uid://dwbgw1yroxfmb" path="res://prototype/draisine.tscn" id="4_gpe2w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uvgfs"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Road" type="Node2D" parent="."]
+script = ExtResource("1_74okm")
+road_params = ExtResource("2_twf0n")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 60)
+anchor_mode = 0
+
+[node name="Draisine" parent="." instance=ExtResource("4_gpe2w")]
+z_index = 5
+position = Vector2(236, 329)
+
+[node name="Hero" parent="Draisine" instance=ExtResource("3_2oyv4")]
+z_index = 5
+position = Vector2(0, -32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(321, 332)
+shape = SubResource("WorldBoundaryShape2D_uvgfs")
