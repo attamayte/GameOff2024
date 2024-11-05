@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://budn12sprueln"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6uxdn"]
+size = Vector2(32, 32)
+
+[node name="ItemPanel" type="PanelContainer"]
+offset_right = 76.0
+offset_bottom = 36.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Line" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/Line"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6uxdn")
+
+[node name="Label" type="Label" parent="MarginContainer/Line"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Item"

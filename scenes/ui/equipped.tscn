@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvclp4q5lmh5w"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yaevp"]
+size = Vector2(64, 128)
+
+[node name="EquippedPanel" type="PanelContainer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_yaevp")

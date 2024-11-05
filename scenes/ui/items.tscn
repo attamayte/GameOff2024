@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfl3ct33rlh44"]
+
+[ext_resource type="PackedScene" uid="uid://budn12sprueln" path="res://scenes/ui/item_panel.tscn" id="1_p3uox"]
+
+[node name="ListOfItems" type="ScrollContainer"]
+
+[node name="Items" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ItemPanel" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel2" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel3" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel4" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel5" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel6" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel7" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel8" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel9" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2
+
+[node name="ItemPanel10" parent="Items" instance=ExtResource("1_p3uox")]
+layout_mode = 2

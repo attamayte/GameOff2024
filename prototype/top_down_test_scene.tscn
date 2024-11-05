@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj47pyutfeh3n"]
+
+[ext_resource type="Script" path="res://code/common/controller.gd" id="1_f63go"]
+[ext_resource type="PackedScene" uid="uid://c50gdxhjrvd0g" path="res://scenes/game/character.tscn" id="2_i6j6x"]
+[ext_resource type="Texture2D" uid="uid://dknqwy7lto5vv" path="res://prototype/test_trees_topdown.png" id="3_1a0rj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtiky"]
+radius = 8.0
+
+[node name="TopDownTestScene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Controller" type="Node" parent="." node_paths=PackedStringArray("character")]
+script = ExtResource("1_f63go")
+character = NodePath("../Character")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Character" parent="." instance=ExtResource("2_i6j6x")]
+
+[node name="TestTreesTopdown" type="Sprite2D" parent="."]
+position = Vector2(69, 106)
+texture = ExtResource("3_1a0rj")
+centered = false
+offset = Vector2(-42, -225)
+region_enabled = true
+region_rect = Rect2(552, 274, 84, 231)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TestTreesTopdown"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown/StaticBody2D"]
+shape = SubResource("CircleShape2D_xtiky")
