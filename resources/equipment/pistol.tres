@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=2 format=3 uid="uid://dpurxifbw6cng"]
+
+[ext_resource type="Script" path="res://code/inventory/equipment.gd" id="1_rhn8g"]
+
+[resource]
+script = ExtResource("1_rhn8g")
+idle_animation = &"hands_pistol_idle"
+ready_animation = &"hands_pistol_ready"
+action_animation = &"hands_pistol_action"
+reload_animation = &""
+use_animation = &""
+label = ""
+description = ""
+size = 0
+stack = 1
+value = 0
+equip_effect = 0
+use_effect = 0
+type = 1

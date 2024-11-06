@@ -1,14 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj47pyutfeh3n"]
+[gd_scene load_steps=8 format=3 uid="uid://cj47pyutfeh3n"]
 
 [ext_resource type="Script" path="res://code/common/controller.gd" id="1_f63go"]
 [ext_resource type="PackedScene" uid="uid://c50gdxhjrvd0g" path="res://scenes/game/character.tscn" id="2_i6j6x"]
 [ext_resource type="Texture2D" uid="uid://dknqwy7lto5vv" path="res://prototype/test_trees_topdown.png" id="3_1a0rj"]
+
+[sub_resource type="Gradient" id="Gradient_l75q5"]
+colors = PackedColorArray(0.28485, 0.28485, 0.28485, 1, 0.396889, 0.396889, 0.396889, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_g5iqg"]
+frequency = 0.4758
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gn4ag"]
+width = 640
+height = 360
+color_ramp = SubResource("Gradient_l75q5")
+noise = SubResource("FastNoiseLite_g5iqg")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xtiky"]
 radius = 8.0
 
 [node name="TopDownTestScene" type="Node2D"]
 y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-320, -180)
+texture = SubResource("NoiseTexture2D_gn4ag")
+centered = false
 
 [node name="Controller" type="Node" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("1_f63go")
