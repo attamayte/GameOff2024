@@ -1,0 +1,546 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn0klpwov2okh"]
+
+[ext_resource type="Texture2D" uid="uid://co3hmucdakyk1" path="res://prototype/ground.png" id="1_ijq1c"]
+[ext_resource type="Texture2D" uid="uid://dl51qviy2mdh0" path="res://prototype/grass_background.png" id="2_p7x5t"]
+[ext_resource type="Texture2D" uid="uid://dknqwy7lto5vv" path="res://prototype/test_trees_topdown.png" id="2_yhoc1"]
+[ext_resource type="Texture2D" uid="uid://cnqsa7jm3s2ur" path="res://prototype/env, checkpoint-test_atlas.png" id="3_nlvcr"]
+
+[node name="Environment" type="Node2D"]
+
+[node name="GroundLayer" type="Node2D" parent="."]
+
+[node name="Ground" type="Sprite2D" parent="GroundLayer"]
+texture = ExtResource("1_ijq1c")
+centered = false
+
+[node name="Ground3" type="Sprite2D" parent="GroundLayer"]
+position = Vector2(640, 0)
+texture = ExtResource("1_ijq1c")
+centered = false
+
+[node name="Ground2" type="Sprite2D" parent="GroundLayer"]
+position = Vector2(0, 360)
+texture = ExtResource("1_ijq1c")
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="Ground4" type="Sprite2D" parent="GroundLayer"]
+position = Vector2(640, 360)
+texture = ExtResource("1_ijq1c")
+centered = false
+flip_h = true
+
+[node name="GrassBackground" type="Sprite2D" parent="GroundLayer"]
+position = Vector2(321, 179)
+texture = ExtResource("2_p7x5t")
+
+[node name="GrassBackground2" type="Sprite2D" parent="GroundLayer"]
+position = Vector2(961, 178)
+texture = ExtResource("2_p7x5t")
+
+[node name="RailroadLayer" type="Node2D" parent="GroundLayer"]
+position = Vector2(636, 345)
+
+[node name="Rails" type="Sprite2D" parent="GroundLayer/RailroadLayer"]
+position = Vector2(-636, 0)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 328, 640, 32)
+
+[node name="Rails2" type="Sprite2D" parent="GroundLayer/RailroadLayer"]
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 328, 640, 32)
+
+[node name="TreesLayer" type="Node2D" parent="."]
+
+[node name="Spruce" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(489, -13)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(552, 280, 86, 225)
+
+[node name="Spruce2" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(382, 239)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(552, 280, 86, 225)
+
+[node name="Pinetree" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(564, 57)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(136, 56, 72, 200)
+
+[node name="Pinetree2" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(323, 317)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(136, 56, 72, 200)
+
+[node name="Pinetree3" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(637, 261)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(136, 56, 72, 200)
+
+[node name="Pinetree4" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(637, 261)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(136, 56, 72, 200)
+
+[node name="Pinetree5" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(637, 261)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(136, 56, 72, 200)
+
+[node name="Pinetree6" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(454, 139)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(136, 56, 72, 200)
+
+[node name="DeadTree" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(688, 63)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(488, 80, 56, 168)
+
+[node name="DeadTree7" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(464, 261)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(488, 80, 56, 168)
+
+[node name="DeadTree2" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(331, 105)
+texture = ExtResource("2_yhoc1")
+region_enabled = true
+region_rect = Rect2(360, 80, 64, 168)
+
+[node name="DeadTree3" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(716, 372)
+texture = ExtResource("2_yhoc1")
+region_enabled = true
+region_rect = Rect2(360, 80, 64, 168)
+
+[node name="DeadTree4" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(716, 372)
+texture = ExtResource("2_yhoc1")
+region_enabled = true
+region_rect = Rect2(360, 80, 64, 168)
+
+[node name="DeadTree5" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(671, 427)
+texture = ExtResource("2_yhoc1")
+region_enabled = true
+region_rect = Rect2(360, 80, 64, 168)
+
+[node name="DeadTree6" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(499, 230)
+texture = ExtResource("2_yhoc1")
+region_enabled = true
+region_rect = Rect2(360, 80, 64, 168)
+
+[node name="LeaafTree" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(771, 50)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(280, 48, 80, 200)
+
+[node name="LeaafTree2" type="Sprite2D" parent="TreesLayer"]
+position = Vector2(152, 327)
+texture = ExtResource("2_yhoc1")
+centered = false
+region_enabled = true
+region_rect = Rect2(280, 48, 80, 200)
+
+[node name="StonesLayer" type="Node2D" parent="."]
+
+[node name="Stone1" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(632, 610)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 272, 40, 24)
+
+[node name="Stone7" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(596, 293)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 272, 40, 24)
+
+[node name="Stone8" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(537, 192)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 272, 40, 24)
+
+[node name="Stone2" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(224, 168)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 240, 16, 16)
+
+[node name="Stone9" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(541, 374)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 240, 16, 16)
+
+[node name="Stone10" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(551, 379)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 240, 16, 16)
+
+[node name="Stone11" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(469, 423)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 240, 16, 16)
+
+[node name="Stone12" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(509, 324)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 240, 16, 16)
+
+[node name="Stone3" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(271, 166)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 240, 16, 8)
+
+[node name="Stone4" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(189, 164)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(48, 256, 16, 8)
+
+[node name="Stone13" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(268, 356)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(48, 256, 16, 8)
+
+[node name="Stone14" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(315, 356)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(48, 256, 16, 8)
+
+[node name="Stone15" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(313, 479)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(48, 256, 16, 8)
+
+[node name="Stone5" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(241, 131)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 256, 16, 16)
+
+[node name="Stone6" type="Sprite2D" parent="StonesLayer"]
+position = Vector2(250, 183)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 256, 16, 8)
+
+[node name="Checkpoint" type="Sprite2D" parent="."]
+position = Vector2(525, 235)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 224, 88, 96)
+
+[node name="GrassLayer" type="Node2D" parent="."]
+position = Vector2(636, 345)
+
+[node name="GrassDark3" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-112, -22)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 256, 88, 16)
+
+[node name="GrassDark1" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-407, 7)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 240, 32, 16)
+
+[node name="GrassDark9" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-155, -37)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 240, 32, 16)
+
+[node name="GrassDark2" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(331, 3)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(128, 240, 32, 16)
+
+[node name="GrassDark4" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-374, -5)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(224, 240, 24, 16)
+
+[node name="GrassDark5" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-328, 13)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 256, 16, 8)
+
+[node name="GrassMedium1" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-223, -78)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(224, 256, 16, 8)
+
+[node name="GrassLight1" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-298, 166)
+texture = ExtResource("3_nlvcr")
+region_enabled = true
+region_rect = Rect2(160, 240, 64, 16)
+
+[node name="GrassLight6" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-237, 156)
+texture = ExtResource("3_nlvcr")
+region_enabled = true
+region_rect = Rect2(160, 240, 64, 16)
+
+[node name="GrassLight2" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-304, -143)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(192, 256, 32, 8)
+
+[node name="GrassLight7" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-187, 103)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(192, 256, 32, 8)
+
+[node name="GrassLight3" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-420, -119)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(160, 272, 32, 16)
+
+[node name="GrassLight15" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-284, -139)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(160, 272, 32, 16)
+
+[node name="GrassLight16" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-444, -119)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(160, 272, 32, 16)
+
+[node name="GrassLight4" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-496, -105)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 304, 32, 16)
+
+[node name="GrassLight17" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-496, -105)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 304, 32, 16)
+
+[node name="GrassLight18" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-425, -114)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 304, 32, 16)
+
+[node name="GrassLight8" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-530, 25)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(16, 304, 32, 16)
+
+[node name="GrassLight5" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-281, -81)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 288, 16, 16)
+
+[node name="GrassLight9" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-281, -81)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 288, 16, 16)
+
+[node name="GrassLight10" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-460, 168)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 288, 16, 16)
+
+[node name="GrassLight11" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-460, 168)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 288, 16, 16)
+
+[node name="GrassLight12" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-451, 175)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 288, 16, 16)
+
+[node name="GrassLight13" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-432, 174)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 288, 16, 16)
+
+[node name="GrassLight14" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(29, 161)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(240, 288, 16, 16)
+
+[node name="GrassDark6" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-40, 8)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 304, 56, 16)
+
+[node name="GrassDark7" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-276, 150)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark18" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-289, -128)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark17" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-306, -134)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark10" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(160, 2)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark11" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-92, -131)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark12" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-102, -138)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark13" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-102, -138)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark14" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-102, -127)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark15" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-126, -145)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark16" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-118, -136)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 304, 24, 16)
+
+[node name="GrassDark8" type="Sprite2D" parent="GrassLayer"]
+position = Vector2(-224, 110)
+texture = ExtResource("3_nlvcr")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 288, 88, 16)
