@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dknqwy7lto5vv"
-path.s3tc="res://.godot/imported/test_trees_topdown.png-3b5a261173ec75e8fe2538cf80033fc1.s3tc.ctex"
+uid="uid://dksp24yuhcrlh"
+path.s3tc="res://.godot/imported/tree_branch trunk.png-ed9a90c944d5cb5c96d76ac752cc9086.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8b9ccec8c9daa658711e6bb01aa476c3"
+}
 
 [deps]
 
-source_file="res://prototype/test_trees_topdown.png"
-dest_files=["res://.godot/imported/test_trees_topdown.png-3b5a261173ec75e8fe2538cf80033fc1.s3tc.ctex"]
+source_file="res://prototype/tree_branch trunk.png"
+dest_files=["res://.godot/imported/tree_branch trunk.png-ed9a90c944d5cb5c96d76ac752cc9086.s3tc.ctex"]
 
 [params]
 
@@ -27,7 +30,7 @@ mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
 process/fix_alpha_border=true
-process/premult_alpha=true
+process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false

@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://dila7yw1uclqg"]
+
+[ext_resource type="Material" uid="uid://btdxe1o48pqle" path="res://prototype/rails_material.tres" id="1_5wo6c"]
+[ext_resource type="Script" path="res://prototype/rail.gd" id="2_8frgj"]
+
+[sub_resource type="Curve3D" id="Curve3D_aodyl"]
+bake_interval = 0.1
+_data = {
+"points": PackedVector3Array(-111.05, 0, -1.33, 128, 0, 1.33, -127.75, 0.07, -29.46, -128, 0, 0, 20.07, 0, -0.1, 128.07, 0.0697021, 78.8178),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lujf"]
+albedo_color = Color(0.513233, 0.513233, 0.513233, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3ai3j"]
+size = Vector3(2, 0.5, 3)
+
+[node name="TestRailRoad" type="Path3D"]
+curve = SubResource("Curve3D_aodyl")
+
+[node name="Planks" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(-1.5, -0.1, -1, 0, 1, 0, 1.5, -0.1)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 4.0
+path_joined = false
+material = SubResource("StandardMaterial3D_4lujf")
+
+[node name="RailRoadPath" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0745332, 1.7872e-07, -0.997195, 5.74186e-09, 0.999981, 1.78788e-07, 0.997204, 7.60007e-09, -0.0745325, -114.006, 0.0699988, -28.8857)
+progress = 13.7583
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RailRoadPath"]
+transform = Transform3D(1, 1.45519e-11, 1.49012e-08, 1.45519e-11, 1, -6.36646e-11, 0, -1.72804e-10, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_3ai3j")
+
+[node name="R65RailRight" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(0.69, 0, 0.69, 0.02, 0.75, 0.04, 0.75, 0.14, 0.72, 0.15, 0.72, 0.18, 0.8, 0.18, 0.8, 0.15, 0.77, 0.14, 0.77, 0.04, 0.83, 0.02, 0.83, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.5
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = ExtResource("1_5wo6c")
+script = ExtResource("2_8frgj")
+
+[node name="R65RailLeft" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(-1.59, 0, -1.59, 0.02, -1.53, 0.04, -1.53, 0.14, -1.56, 0.15, -1.56, 0.18, -1.48, 0.18, -1.48, 0.15, -1.51, 0.14, -1.51, 0.04, -1.45, 0.02, -1.45, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.5
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = ExtResource("1_5wo6c")
+script = ExtResource("2_8frgj")
+left_rail = true

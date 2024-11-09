@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://j7asiyluryno"]
+
+[ext_resource type="Shader" uid="uid://qs0wfd4rk32d" path="res://prototype/testing_3d_perspective.tres" id="1_2odjg"]
+[ext_resource type="Texture2D" uid="uid://dksp24yuhcrlh" path="res://prototype/tree_branch trunk.png" id="2_fsce7"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2odjg")
+shader_parameter/Color = ExtResource("2_fsce7")

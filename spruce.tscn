@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd2vf06odfoak"]
+
+[ext_resource type="ArrayMesh" uid="uid://b60qflrn1vjkx" path="res://prototype/tree_mesh.res" id="1_oxca8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y8em5"]
+
+[node name="Spruce" type="MeshInstance3D"]
+visibility_range_end = 256.0
+mesh = ExtResource("1_oxca8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_y8em5")

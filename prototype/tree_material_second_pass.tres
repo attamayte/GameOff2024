@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bc4ymdk8bhjs3"]
+
+[ext_resource type="Texture2D" uid="uid://dksp24yuhcrlh" path="res://prototype/tree_branch trunk.png" id="1_07dr7"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_07dr7")

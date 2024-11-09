@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c50gdxhjrvd0g"]
+[gd_scene load_steps=22 format=3 uid="uid://c50gdxhjrvd0g"]
 
 [ext_resource type="Script" path="res://code/common/character.gd" id="1_jhpo0"]
 [ext_resource type="Script" path="res://code/common/character_hands.gd" id="3_7i72p"]
@@ -6,6 +6,22 @@
 [ext_resource type="Resource" uid="uid://dpurxifbw6cng" path="res://resources/equipment/pistol.tres" id="4_c1s3h"]
 [ext_resource type="Script" path="res://code/inventory/inventory.gd" id="4_s42jf"]
 [ext_resource type="AudioStream" uid="uid://ced3wfyubyfcb" path="res://sound/firearm/single-pistol-gunshot-3-101923.mp3" id="5_ser41"]
+[ext_resource type="Script" path="res://code/character/perception2d.gd" id="7_j7m4w"]
+
+[sub_resource type="Gradient" id="Gradient_w2ulh"]
+offsets = PackedFloat32Array(0.9, 1)
+colors = PackedColorArray(0, 0, 0, 0.25098, 0, 0, 0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nwv72"]
+gradient = SubResource("Gradient_w2ulh")
+width = 32
+height = 8
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 4
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7m4d5"]
 radius = 8.0
@@ -1220,9 +1236,15 @@ _data = {
 "hands_pistol_ready": SubResource("Animation_bfp3t")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_on0u2"]
+radius = 360.0
+
 [node name="Character" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_jhpo0")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_nwv72")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7m4d5")
@@ -1367,24 +1389,18 @@ text = "State"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpeedLabel" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.0
-offset_top = -57.0
-offset_right = 26.0
-offset_bottom = -34.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Speed"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("4_s42jf")
 
 [node name="CharacterEars" type="AudioListener2D" parent="."]
 current = true
+
+[node name="NavigationAgent" type="NavigationAgent2D" parent="."]
+
+[node name="Perception" type="Area2D" parent="."]
+script = ExtResource("7_j7m4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perception"]
+shape = SubResource("CircleShape2D_on0u2")
+
+[node name="Camera2D" type="Camera2D" parent="."]

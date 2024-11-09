@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://b7w50wo72jrpp"]
+
+[ext_resource type="Texture2D" uid="uid://bqg0jetwctlmy" path="res://prototype/test-2/ground.png" id="1_qyfao"]
+[ext_resource type="Texture2D" uid="uid://cnqsa7jm3s2ur" path="res://prototype/env, checkpoint-test_atlas.png" id="2_tosts"]
+[ext_resource type="Texture2D" uid="uid://dknqwy7lto5vv" path="res://prototype/test_trees_topdown.png" id="3_em3w4"]
+[ext_resource type="Texture2D" uid="uid://dm3lfe3ufhlgp" path="res://prototype/chibi.png" id="4_5ctsq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cmr3y"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_mgyko"]
+sky_material = SubResource("ProceduralSkyMaterial_cmr3y")
+
+[sub_resource type="Environment" id="Environment_1lofi"]
+background_mode = 2
+sky = SubResource("Sky_mgyko")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5w2a"]
+albedo_texture = ExtResource("1_qyfao")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_p6n6p"]
+material = SubResource("StandardMaterial3D_f5w2a")
+size = Vector2(32, 18)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1lofi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.921185, -0.27944, 0.270796, 0, 0.695913, 0.718126, -0.389124, -0.661527, 0.641065, 0, 0, 0)
+shadow_enabled = true
+shadow_bias = 0.02
+directional_shadow_mode = 0
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 1.0
+directional_shadow_max_distance = 20.0
+directional_shadow_pancake_size = 0.0
+
+[node name="GroundPlane" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_p6n6p")
+
+[node name="GroundPlane2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18)
+mesh = SubResource("PlaneMesh_p6n6p")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 5, 24)
+projection = 1
+size = 4.5
+far = 100.0
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("2_tosts")
+region_enabled = true
+region_rect = Rect2(256, 227, 87, 93)
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14833, 0.846263, 0.486215)
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_em3w4")
+region_enabled = true
+region_rect = Rect2(363, 78, 55, 171)
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39499, 0.192, 0.0285548)
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("4_5ctsq")
+region_enabled = true
+region_rect = Rect2(28, 16, 11, 38)

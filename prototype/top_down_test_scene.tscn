@@ -1,8 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj47pyutfeh3n"]
+[gd_scene load_steps=9 format=3 uid="uid://cj47pyutfeh3n"]
 
 [ext_resource type="Script" path="res://code/common/controller.gd" id="1_f63go"]
 [ext_resource type="PackedScene" uid="uid://c50gdxhjrvd0g" path="res://scenes/game/character.tscn" id="2_i6j6x"]
 [ext_resource type="Texture2D" uid="uid://dknqwy7lto5vv" path="res://prototype/test_trees_topdown.png" id="3_1a0rj"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_2dgon"]
+vertices = PackedVector2Array(-74.1016, -64.8281, 69, 87.6484, 59.8281, 90.1016, -175.648, 48, -80.8281, -58.1016, 87.3516, 106, 218, -55.6484, 173, 128.648, 163.828, 131.102, 84.8984, 115.172, -179.898, 186.172, -173.867, 192.188, -310, 190.141, 334, -174, 334, 199.844, 236.352, -74, 233.898, -83.1719, 233.898, -64.8281, 191.352, 147, 188.898, 137.828, 157.102, 137.828, -50.6484, 133, -53.1016, 123.828, -154.422, 192.492, -148.102, 186.172, 227.172, -58.1016, 182.172, 131.102, 53.1016, 96.8281, 154.648, 147, -53.1016, 142.172, -145.648, 177, -182.352, 177, -310, -174, -179.898, 167.828, -173.172, 161.102, -209.898, 57.1719, 188.898, 156.172, 50.6484, 106, -178.102, 57.1719, 84.8984, 96.8281, 208.828, -58.1016, 202.102, -64.8281, 78.1719, 90.1016, 227.172, -89.8984, -71.6484, -74, 202.102, -83.1719, 199.648, -74, -74.1016, -83.1719, -90, -55.6484, -178.102, 38.8281, -99.1719, -58.1016, -184.828, 32.1016, -105.898, -64.8281, -194, 29.6484, 157.102, 156.172, -59.8281, 148.898, -148.102, 167.828, 53.1016, 115.172, -184.828, 63.8984, 182.172, 162.898, -108.352, -74, -203.172, 32.1016, 78.1719, 121.898, 218, -92.3516, 208.828, -89.8984, -80.8281, -89.8984, -90, -92.3516, -99.1719, -89.8984, -105.898, -83.1719, -209.898, 38.8281, -59.8281, 117.102, 69, 124.352, 163.828, 162.898, -69, 151.352, -154.828, 161.102, 173, 165.352, -212.352, 48, -194, 66.3516, 59.8281, 121.898, -69, 114.648, -78.1719, 117.102, -84.8984, 123.828, -87.3516, 133, -203.172, 63.8984, -84.8984, 142.172, -164, 158.648, -78.1719, 148.898)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12), PackedInt32Array(13, 14, 15, 16), PackedInt32Array(17, 15, 14, 18, 19), PackedInt32Array(8, 20, 21, 22), PackedInt32Array(14, 23, 24), PackedInt32Array(25, 17, 19, 26), PackedInt32Array(3, 2, 27), PackedInt32Array(6, 25, 26, 7), PackedInt32Array(21, 20, 28, 29), PackedInt32Array(14, 24, 30), PackedInt32Array(31, 10, 12, 32), PackedInt32Array(33, 31, 32), PackedInt32Array(34, 33, 32, 35), PackedInt32Array(36, 18, 14), PackedInt32Array(3, 27, 37, 38), PackedInt32Array(6, 5, 39, 40), PackedInt32Array(41, 40, 39, 42, 0), PackedInt32Array(13, 16, 43), PackedInt32Array(44, 45, 46, 0), PackedInt32Array(45, 44, 47), PackedInt32Array(0, 46, 41), PackedInt32Array(0, 42, 1), PackedInt32Array(48, 4, 3, 49), PackedInt32Array(50, 48, 49, 51), PackedInt32Array(52, 50, 51, 53), PackedInt32Array(29, 28, 54, 55), PackedInt32Array(14, 30, 56), PackedInt32Array(38, 37, 57, 58), PackedInt32Array(59, 36, 14), PackedInt32Array(32, 60, 52, 53, 61), PackedInt32Array(62, 9, 8), PackedInt32Array(13, 43, 63), PackedInt32Array(32, 13, 63, 64), PackedInt32Array(32, 64, 45, 65, 66), PackedInt32Array(45, 47, 65), PackedInt32Array(32, 66, 67), PackedInt32Array(32, 67, 68), PackedInt32Array(32, 68, 60), PackedInt32Array(32, 61, 69), PackedInt32Array(8, 22, 70, 71), PackedInt32Array(55, 54, 72, 73), PackedInt32Array(14, 56, 74, 75), PackedInt32Array(32, 69, 76), PackedInt32Array(77, 58, 57, 78, 70, 79), PackedInt32Array(75, 59, 14), PackedInt32Array(72, 75, 74, 73), PackedInt32Array(71, 62, 8), PackedInt32Array(78, 71, 70), PackedInt32Array(77, 79, 80), PackedInt32Array(77, 80, 81), PackedInt32Array(77, 81, 82), PackedInt32Array(83, 77, 82, 84, 74, 85), PackedInt32Array(86, 73, 74), PackedInt32Array(84, 86, 74), PackedInt32Array(83, 85, 34, 35), PackedInt32Array(32, 76, 35)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-320, -184, 344, -184, 344, 210, -320, 200)])
+parsed_geometry_type = 1
 
 [sub_resource type="Gradient" id="Gradient_l75q5"]
 colors = PackedColorArray(0.28485, 0.28485, 0.28485, 1, 0.396889, 0.396889, 0.396889, 1)
@@ -19,8 +25,9 @@ noise = SubResource("FastNoiseLite_g5iqg")
 [sub_resource type="CircleShape2D" id="CircleShape2D_xtiky"]
 radius = 8.0
 
-[node name="TopDownTestScene" type="Node2D"]
+[node name="TopDownTestScene" type="NavigationRegion2D"]
 y_sort_enabled = true
+navigation_polygon = SubResource("NavigationPolygon_2dgon")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-320, -180)
@@ -47,3 +54,89 @@ region_rect = Rect2(552, 274, 84, 231)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown/StaticBody2D"]
 shape = SubResource("CircleShape2D_xtiky")
+
+[node name="TestTreesTopdown6" type="Sprite2D" parent="."]
+position = Vector2(-164, 177)
+texture = ExtResource("3_1a0rj")
+centered = false
+offset = Vector2(-42, -225)
+region_enabled = true
+region_rect = Rect2(552, 274, 84, 231)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TestTreesTopdown6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown6/StaticBody2D"]
+shape = SubResource("CircleShape2D_xtiky")
+
+[node name="TestTreesTopdown3" type="Sprite2D" parent="."]
+position = Vector2(-90, -74)
+texture = ExtResource("3_1a0rj")
+centered = false
+offset = Vector2(-42, -225)
+region_enabled = true
+region_rect = Rect2(552, 274, 84, 231)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TestTreesTopdown3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown3/StaticBody2D"]
+shape = SubResource("CircleShape2D_xtiky")
+
+[node name="TestTreesTopdown2" type="Sprite2D" parent="."]
+position = Vector2(-194, 48)
+texture = ExtResource("3_1a0rj")
+centered = false
+offset = Vector2(-30, -164)
+region_enabled = true
+region_rect = Rect2(364, 79, 54, 170)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TestTreesTopdown2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown2/StaticBody2D"]
+shape = SubResource("CircleShape2D_xtiky")
+
+[node name="TestTreesTopdown7" type="Sprite2D" parent="."]
+position = Vector2(173, 147)
+texture = ExtResource("3_1a0rj")
+centered = false
+offset = Vector2(-30, -164)
+region_enabled = true
+region_rect = Rect2(364, 79, 54, 170)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TestTreesTopdown7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown7/StaticBody2D"]
+shape = SubResource("CircleShape2D_xtiky")
+
+[node name="TestTreesTopdown4" type="Sprite2D" parent="."]
+position = Vector2(218, -74)
+texture = ExtResource("3_1a0rj")
+centered = false
+offset = Vector2(-30, -164)
+region_enabled = true
+region_rect = Rect2(364, 79, 54, 170)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TestTreesTopdown4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown4/StaticBody2D"]
+shape = SubResource("CircleShape2D_xtiky")
+
+[node name="TestTreesTopdown5" type="Sprite2D" parent="."]
+position = Vector2(-69, 133)
+texture = ExtResource("3_1a0rj")
+centered = false
+offset = Vector2(-30, -164)
+region_enabled = true
+region_rect = Rect2(364, 79, 54, 170)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TestTreesTopdown5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTreesTopdown5/StaticBody2D"]
+shape = SubResource("CircleShape2D_xtiky")
+
+[node name="Character2" parent="." instance=ExtResource("2_i6j6x")]
+position = Vector2(-112, -24)
+
+[node name="AiController" type="Node" parent="." node_paths=PackedStringArray("character")]
+script = ExtResource("1_f63go")
+character = NodePath("../Character2")
+ai_controlled = true

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://b120rm1sqy5y3"]
+
+[sub_resource type="Curve3D" id="Curve3D_s0lek"]
+_data = {
+"points": PackedVector3Array(-48.58, 0, -27.64, 48.58, 0, 27.64, -64.56, 0, -132.38, 6.8, 0, -26.25, -6.8, 0, 26.25, -73.62, 0, -20.7, 32.83, 0, -54.32, -32.83, 0, 54.32, 17.29, 0, 131.63),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_2n0wx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_visyb"]
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fmixv"]
+color_ramp = SubResource("Gradient_2n0wx")
+noise = SubResource("FastNoiseLite_visyb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfe0e"]
+albedo_color = Color(0.362829, 0.362829, 0.362829, 1)
+albedo_texture = SubResource("NoiseTexture2D_fmixv")
+
+[node name="TestRoad" type="Path3D"]
+curve = SubResource("Curve3D_s0lek")
+
+[node name="RoadCSG" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(-3.5, 0, -3, 0.05, 3, 0.05, 3.5, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 10.0
+path_joined = false
+material = SubResource("StandardMaterial3D_bfe0e")

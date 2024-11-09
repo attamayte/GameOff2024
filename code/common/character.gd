@@ -3,8 +3,17 @@ class_name Character extends CharacterBody2D
 # _state (machine?) stuff
 enum State { IDLE, WALKING, RUNNING, TAKING_DAMAGE, DEAD }
 
+enum Team { NULL, PLAYER, GUARD, RAIDER, CULTIST }
+
 signal state_entered(new_state: State)
 signal changed_facing(left: bool)
+signal enemy_detected(enemy: Character)
+signal enemy_visible(enemy: Character)
+signal enemy_hidden(enemy: Character)
+signal enemy_lost(enemy: Character)
+
+@export_category("Social")
+@export var team: Team
 
 @export_category("Survival")
 @export var max_health: float = 100.0
@@ -17,12 +26,16 @@ signal changed_facing(left: bool)
 @export var aim_speed: float = 16.0
 @export var acceleration: float = 1024.0
 
+
 ## DEBUG
 @onready var state_label: Label = $StateLabel
-@onready var speed_label: Label = $SpeedLabel
 
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+## NAVIGATION AND AI
+@onready var navigation_agent: NavigationAgent2D = $NavigationAgent
+@onready var perception: Perception2D = $Perception
 
 @onready var hands: CharacterHands = $Hands
 @onready var hands_transform: RemoteTransform2D = $Pelvic/Body/HandsTransform
@@ -49,6 +62,24 @@ var prev_body_state: State
 
 func _ready() -> void:
 	enter_state(State.IDLE)
+
+func is_friendly(character: Character) -> bool:
+	var other_team: Team = character.team
+	match team:
+		Team.NULL: return false
+		Team.PLAYER: return other_team == Team.PLAYER or other_team == Team.GUARD
+		Team.RAIDER: return other_team == Team.RAIDER
+		Team.CULTIST: return other_team == Team.CULTIST or other_team == Team.GUARD
+		_: return false
+	
+func is_enemy(character: Character) -> bool:
+	var other_team: Team = character.team
+	match team:
+		Team.NULL: return false
+		Team.PLAYER: return other_team == Team.RAIDER or other_team == Team.CULTIST
+		Team.RAIDER: return other_team != Team.RAIDER
+		Team.CULTIST: return other_team != Team.CULTIST or other_team != Team.GUARD
+		_: return false
 
 func set_input_state(movement: Vector2, running: bool, readying: bool, actioning: bool, using: bool) -> void:
 	movement_input = movement
@@ -143,8 +174,6 @@ func _process(delta: float) -> void:
 	
 	## Clear input
 	set_input_state(Vector2.ZERO, false, false, false, false)
-	
-	speed_label.text = str(velocity.length())
 			
 func _physics_process(_delta: float) -> void:
 	move_and_slide()

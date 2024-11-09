@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://f231b7ce4fap"]
+
+[ext_resource type="Shader" uid="uid://qs0wfd4rk32d" path="res://prototype/testing_3d_perspective.tres" id="1_oir4v"]
+[ext_resource type="Texture2D" uid="uid://pl77etoqt5mn" path="res://prototype/grass_chunk_3d_grass_chunk_hd.png" id="2_bkw86"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_oir4v")
+shader_parameter/Color = ExtResource("2_bkw86")
